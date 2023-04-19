@@ -45,7 +45,7 @@ app.use((err, req, res, next) => {
   return res.status(errorStatus).send(errorMessage);
 });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
   connect();
   console.log("Backend server is running!");
 });
